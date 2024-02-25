@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Rayal Restaurant</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <style>
+        body {font-family:"Times New Roman", serif}
+        h1,h2,h3,h4,h5,h6 {font-family:serif; letter-spacing:3px}
+        .rate {
+                float: left;
+                height: 46px;
+                padding: 0 10px;
+                }
+                .rate:not(:checked) > input {
+                    position:absolute;
+                    top:-9999px;
+                }
+                .rate:not(:checked) > label {
+                    float:right;
+                    width:1em;
+                    overflow:hidden;
+                    white-space:nowrap;
+                    cursor:pointer;
+                    font-size:38px;
+                    color:#ccc;
+                }
+                .rate:not(:checked) > label:before {
+                    content: '★ ';
+                }
+                .rate > input:checked ~ label {
+                    color: rgba(255, 123, 0, 0.747);    
+                }
+             </style>
+</head>
+  <body>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+        <a class="navbar-brand pr-3 pb-0 text-white" href="#"><h3>Contact here</h3></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size: 21px;">
+          <ul class="navbar-nav mr-auto" >
+            <li class="nav-item active" >
+              <a class="nav-link pr-3" href="index.html"> <i class="fas fa-home"><span>&nbsp;Home <span class="sr-only">(current)</span></span></i></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white pr-3" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fab fa-blogger"><span>&nbsp;Service</span></i>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="font-size: 20px;">
+                <a class="dropdown-item" href="menu.html">Menu</a>
+                <a class="dropdown-item" href="catering.html">Catering</a>
+                <a class="dropdown-item" href="book_table.html">Book a Table</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white pr-3" href="contact.html"><i class="fas fa-phone-square"><span>&nbsp;Contact Us </span></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white pr-3" href="about.html"><i class="fas fa-address-book"><span>&nbsp;About Us</span></i></a>
+              </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right pt-2 text-white">
+            <i class="fas fa-user"><span class="mr-3">&nbsp; sign-up</span></i><br>
+            <i class="fas fa-sign-in-alt"><span class="mr-3">&nbsp; Login</span></i>
+          </ul>
+          
+        </div>
+      </nav><br>
+<div class="container-fluid mt-5">
+    <h1 class= "text-center">Contact Us</h1>
+    <div class="container mt-4" style="font-size: 22px;">
+        <div class="row">
+                <div class="col-md-6" style="background-color: rgb(173, 236, 251);">
+                <form action="server.php" method="post">
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <label for="fname">Full Name</label>
+                            <input type="text" class="form-control" name="fname" placeholder="Enter your Full Name" required>
+                        </div>
+                    </div>
+                    <label for="gender">Gender :-</label>
+                    <div class="form-check">
+                        <label class="radio-inline">
+                            <input type="radio" name="gender">
+                            Male
+                        </label><br>
+                        <label class="radio-inline">
+                            <input type="radio" name="gender">
+                            Female
+                        </label><br>
+                        <label class="radio-inline">
+                            <input type="radio" name="gender">
+                            Others
+                        </label>
+                    </div>
+                    <div class="row">
+                            <div class="col-md-6">
+                                <label for="mailid">E-Mail</label>
+                                <input type="email" class="form-control" name="mailid" placeholder="aruna@gmail.com" required>
+                            </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-md-6">
+                                <label for="phone">Contact No</label>
+                                <input type="number" class="form-control" name="phone" placeholder="Enter your contact number" required>
+                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="feedback">FeedBack</label><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                            <div class="rate">
+                                <input type="radio" id="star5" name="rate" value="5" />
+                                <label for="star5" title="text">5 stars</label>
+                                <input type="radio" id="star4" name="rate" value="4" />
+                                <label for="star4" title="text">4 stars</label>
+                                <input type="radio" id="star3" name="rate" value="3" />
+                                <label for="star3" title="text">3 stars</label>
+                                <input type="radio" id="star2" name="rate" value="2" />
+                                <label for="star2" title="text">2 stars</label>
+                                <input type="radio" id="star1" name="rate" value="1" />
+                                <label for="star1" title="text">1 star</label>
+                              </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col">
+                            <button type="submit" name="save" class="btn btn-dark">submit</button>
+                        </div>
+                    </div> 
+                </form>
+            </div>
+            <div class="col-md-6">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.1459850448814!2d77.13468861475134!3d11.027671892151304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8559a64f4d275%3A0x364dd57fb7617897!2sRayal%20Restaurant!5e0!3m2!1sen!2sin!4v1652869068198!5m2!1sen!2sin" 
+                width="500" height="580" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        </div>
+    </div>
+        <br>
+        <footer>
+            <div class="container-fluid bg-dark text-white pt-5 pb-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3" style="font-size: 19px;">
+                        <h5 class="text-warning">Partnership </h5>
+                             <p>
+                                Become an affliate<br>
+                                shipping routes<br>
+                                Social Media<br>
+                                Branding
+                             </p>
+                    </div>
+                    <div class="col-lg-3" style="font-size: 19px;">
+                        <h5 class="text-warning">Quick Link</h5>
+                             <p>
+                                 Table booking<br>
+                                 FAQ tests<br>
+                                 contact our places<br>
+                                 community around us<br>
+                                 Our Supports<br>
+                             </p>
+                    </div>
+                    <div class="col-lg-3" style="font-size: 19px;">
+                        <h5 class="text-warning">Menus</h5>
+                                 <div class="links">
+                                 <a href="#" class="text-white">Home</a><br>
+                                 <a href="#" class="text-white">South Indian</a><br>
+                                 <a href="#" class="text-white">North Indian</a><br>
+                                 <a href="#" class="text-white">Chinese</a><br>
+                                 <a href="#" class="text-white">Desserts</a><br>
+                                 </div>
+                    </div>
+                    <div class="col-lg-3" style="font-size: 18px;">
+                        <h5 class="text-warning">Contact</h5>
+                        <p>
+                            <i class="fas fa-home "></i>&nbsp; Coimbatore
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope "></i>&nbsp; rayalrestaurant@gmail.com
+                        </p>
+                        <p>
+                            <i class="fas fa-phone "></i>&nbsp; 9532143424
+                        </p>
+                        <p>
+                            <i class="fas fa-print "></i>&nbsp; +0424 466483
+                        </p>
+                                
+                </div>
+            </div><hr>
+            <div class="row">
+                <div class="col-lg-8">
+                    <p style="font-size: 20px;">Copyright @2021 All rights reserved</p>
+                </div>
+                <div class="col-lg-4">
+                    <ul class="list-unstyled list-inline">
+                        <li class="list-inline-item mr-4">
+                            <a href="#" style="font-size: 20px; color: white;">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item mr-3">
+                            <a href="#" style="font-size: 20px; color: white;">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item mr-3">
+                            <a href="#" style="font-size: 20px; color: white;">
+                                <i class="fab fa-google"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item mr-3">
+                            <a href="#" style="font-size: 20px; color: white;">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item mr-3">
+                            <a href="#" style="font-size: 20px; color: white;">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item mr-3">
+                            <a href="#" style="font-size: 20px; color: white;">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            </div>
+        </footer>
+<!--Send Mail Using SMTP Server-->
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
+<script>
+    var btn=document.getElementById('btn');
+    btn.addEventListener('click',function(e){
+        e.preventDefault()
+        Email.send({
+    Host : "smtp.gmail.com",
+    Username : "username",
+    Password : "password",
+    To : document.getElementById('mailid').value,
+    From : "hema.bsm01@gmail.com",
+    Subject : "This is the subject",
+    Body : "Thank you for your valuable Feedback"
+}).then(
+  message => alert(message)
+);
+    })
+</script>
+    </body>
+    </html>

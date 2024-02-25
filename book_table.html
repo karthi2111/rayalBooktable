@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Rayal Restaurant</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <style>
+      body {font-family:"Times New Roman", serif}
+      h1,h2,h3,h4,h5,h6 {font-family:serif; letter-spacing:3px}
+      </style>
+      <!-- <script src="server.js"></script> -->
+  </head>
+  <body>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+        <a class="navbar-brand pr-3 pb-0 text-white" href="#"><h3>Book Your Table</h3></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size: 21px;">
+          <ul class="navbar-nav mr-auto" >
+            <li class="nav-item active" >
+              <a class="nav-link pr-3" href="index.html"> <i class="fas fa-home"><span>&nbsp;Home <span class="sr-only">(current)</span></span></i></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white pr-3" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fab fa-blogger"><span>&nbsp;Service</span></i>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="font-size: 20px;">
+                <a class="dropdown-item" href="menu.html">Menu</a>
+                <a class="dropdown-item" href="catering.html">Catering</a>
+                <a class="dropdown-item" href="book_table.html">Book a Table</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white pr-3" href="contact.html"><i class="fas fa-phone-square"><span>&nbsp;Contact Us </span></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white pr-3" href="about.html"><i class="fas fa-address-book"><span>&nbsp;About Us</span></i></a>
+              </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right pt-2 text-white">
+            <i class="fas fa-user"><span class="mr-3">&nbsp; sign-up</span></i><br>
+            <i class="fas fa-sign-in-alt"><span class="mr-3">&nbsp; Login</span></i>
+          </ul>
+          
+        </div>
+      </nav><br><br>
+      <br>
+
+     <div class="container mt-4 mb-3" style="display: center;padding-left:350px;">
+      <img src="https://images.unsplash.com/photo-1599458252573-56ae36120de1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudCUyMHRhYmxlfGVufDB8fDB8fA%3D%3D&w=1000&q=80" width="60%" onclick="openform()"/>
+  </div>
+     <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+     <div class="modal-dialog" role="document">
+       <div class="modal-content" style="background-color: rgb(255, 190, 77);">
+         <div class="modal-header text-center">
+           <h4 class="font-weight-bold text-white" style="color: rgb(26, 17, 17);">Reserve Table</h4>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+         <div class="modal-body" style="background-color: rgb(249, 231, 231);">
+          <form action="server.php" method="post">
+            <div class="form-row">
+              <div class="col-lg-4">
+                <label>Table No</label>
+                </div>
+                <div class="col-lg-8">
+                  <input class="form-label" list="table" placeholder="Select Table No" name="tableno"/>
+                    <datalist id="table">
+                      <option value="1">
+                      <option value="2">
+                      <option value="3">
+                      <option value="4">
+                      <option value="5">
+                      <option value="6">
+                      <option value="7">
+                      <option value="8">
+                      <option value="9">
+                      <option value="10">
+                    </datalist>
+              </div>
+              </div>
+              <div class="form-row mt-2">
+                <div class="col-lg-4">
+                  <label>Full Name</label>
+                  </div>
+                  <div class="col-lg-8">
+                  <input type="text" class="form-control" id="fname"  required>
+                </div>
+                </div>
+                <div class="form-row mt-2">
+                  <div class="col-lg-4">
+                    <label>No Of Persons</label>
+                    </div>
+                    <div class="col-lg-8">
+                    <input type="number" class="form-control" id="persons"  required>
+                  </div>
+                  </div>
+                  <div class="form-row mt-2">
+                    <div class="col-lg-4">
+                      <label>Contact No</label>
+                      </div>
+                      <div class="col-lg-8">
+                      <input type="tel" pattern="[0-9]{10,15}" class="form-control" id="contact_no" required>
+                    </div>
+                    </div>
+                    <div class="form-row mt-2">
+                      <div class="col-lg-4">
+                        <label>Email Id</label>
+                        </div>
+                        <div class="col-lg-8">
+                        <input type="email" class="form-control" id="emailId"  required>
+                      </div>
+                      </div>
+                      <div class="form-row mt-2">
+                        <div class="col-lg-4">
+                          <label>Date</label>
+                        </div>
+                        <div class="col-lg-8">
+                          <input type="date" class="form-control" id="dateof"  required>
+                        </div>
+                        </div>
+                        <div class="form-row mt-2">
+                          <div class="col-lg-4">
+                            <label>Time</label>
+                          </div>
+                          <div class="col-lg-8">
+                            <input type="time" class="form-control" id="timeof"  required>
+                          </div>
+                          </div>
+                        <div class="text-center mt-3">
+                          <button class="btn btn-success">Reserve</button>
+                        </div>
+   
+         </div>
+       </div>
+     </div>
+   </div>
+  </form>
+   
+   <div class="text-center">
+     <a href="" class="btn btn-primary" data-toggle="modal" data-target="#modalLoginForm">
+       Reserve Your Table...
+     </a>
+   </div>
+
+    <footer class="mt-3">
+        <div class="container-fluid bg-dark text-white pt-5 pb-4 pr-4 pl-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3" style="font-size: 19px;">
+                    <h5 class="text-warning">Partnership </h5>
+                         <p>
+                            Become an affliate<br>
+                            shipping routes<br>
+                            Social Media<br>
+                            Branding
+                         </p>
+                </div>
+                <div class="col-lg-3" style="font-size: 19px;">
+                    <h5 class="text-warning">Quick Link</h5>
+                         <p>
+                             Table booking<br>
+                             FAQ tests<br>
+                             contact our places<br>
+                             community around us<br>
+                             Our Supports<br>
+                         </p>
+                </div>
+                <div class="col-lg-3" style="font-size: 19px;">
+                    <h5 class="text-warning">Menus</h5>
+                             <div class="links">
+                             <a href="#" class="text-white">Home</a><br>
+                             <a href="#" class="text-white">South Indian</a><br>
+                             <a href="#" class="text-white">North Indian</a><br>
+                             <a href="#" class="text-white">Chinese</a><br>
+                             <a href="#" class="text-white">Desserts</a><br>
+                             </div>
+                </div>
+                <div class="col-lg-3" style="font-size: 18px;">
+                    <h5 class="text-warning">Contact</h5>
+                    <p>
+                        <i class="fas fa-home "></i>&nbsp; Coimbatore
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope "></i>&nbsp; rayalrestaurant@gmail.com
+                    </p>
+                    <p>
+                        <i class="fas fa-phone "></i>&nbsp; 9532143424
+                    </p>
+                    <p>
+                        <i class="fas fa-print "></i>&nbsp; +0424 466483
+                    </p>
+                            
+            </div>
+        </div><hr>
+        <div class="row">
+            <div class="col-lg-8">
+                <p style="font-size: 20px;">Copyright @2021 All rights reserved</p>
+            </div>
+            <div class="col-lg-4">
+                <ul class="list-unstyled list-inline">
+                    <li class="list-inline-item mr-4">
+                        <a href="#" style="font-size: 20px; color: white;">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item mr-3">
+                        <a href="#" style="font-size: 20px; color: white;">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item mr-3">
+                        <a href="#" style="font-size: 20px; color: white;">
+                            <i class="fab fa-google"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item mr-3">
+                        <a href="#" style="font-size: 20px; color: white;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item mr-3">
+                        <a href="#" style="font-size: 20px; color: white;">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item mr-3">
+                        <a href="#" style="font-size: 20px; color: white;">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        </div>
+    </footer>
+</body>
+</html>
